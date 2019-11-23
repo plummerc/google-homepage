@@ -10,22 +10,44 @@
      looking for." name="description">
 </head>
 <style>
+    body {
+        -moz-appearance: none;
+    }
+    footer {
+        -
+    }
     a {
         text-decoration: none;
         color: black;
         font: arial, sans-serif;
     }
-    .LHNav {
-        text-align: left;    
+    ul {
+        list-style-type: none;
+        margin: 0;    
+        padding: 0;
     }
-    .RHNav {
-        text-align: right;    
+    li {
+        display: inline;
     }
-    .LFNav {
-        text-align: bottom;    
+    #LHNav {
+        float: left
+
     }
-    .RFNav {
+    #RHNav {
+        text-align: right;  
+        clear: float; 
+    }
+    #LFNav {
+        float: left;    
+        text-align: end;
+    }
+    #RFNav {
         text-align:right;    
+        clear: float;
+    }
+    #LogoSearch {
+        text-align: center;
+        margin: auto;
     }
 </style>
 <body>
@@ -34,11 +56,13 @@
 </header>
 
 <nav>
-<div class="LHNav">
-    <a href ="https://about.google/">About</a>
-    <a href ="https://store.google.com/US/">Store</a>
+<div id="LHNav">
+    <ul>
+        <li><a href ="https://about.google/">About</a></li>
+        <li><a href ="https://store.google.com/US/">Store</a></li>
+    </ul>
 </div>
-<div class="RHNav">
+<div id="RHNav">
     <a href ="https://mail.google.com">Gmail</a>
     <a href ="https://www.google.com/imghp?hl=en&tab=wi&ogbl">Images</a>
     <img src="https://lh3.googleusercontent.com/-aUi9SbL6BZU/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3reUV06qtjbVY9J6GpID60QoqY3UAA.CMID/s32-c/photo.jpg">
@@ -46,26 +70,22 @@
 </nav>
 
 <main>
-<div class="LogoIndex">
+<div id="LogoSearch">
     <img src ="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
-</div>
-<div class="SearchForm">
     <form method="get" action ="GTY.html">
         <input type="text" id="SearchBar" size ="35" required>
         <input type="submit" value="Search">
     </form>
-   
-
 </div>
 </main>
 
 <footer>
-<div class="LFNav">   
+<div id="LFNav">   
     <a href="https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>
     <a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a>
     <a href="https://google.com/search/howsearchworks/?fg=1">How Search Works</a>
 </div>
-<div class="RFNav">   
+<div id="RFNav">   
         <a href="https://policies.google.com/privacy?fg=1">Privacy</a>
         <a href="https://policies.google.com/terms?fg=1">Terms</a>
         <a href="https://www.google.com/preferences?hl=en">Settings</a>
